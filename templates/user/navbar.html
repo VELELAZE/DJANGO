@@ -1,0 +1,19 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'js/script.js' %}">
+<div class="navbar">
+    <div class="logo">
+        <img src="{% static 'images/hacker.jpeg' %}" alt="logo">
+        <h2>Django Website</h2>
+    </div>
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'login' %}">Login</a></li>
+        <li><a href="{% url 'register' %}">Register</a></li>
+    </ul>
+    <div class="fullscreen-icon" id="fullscreenIcon" onclick="toggleFullscreen()">
+        <i class="fas fa-expand" id="fullscreenIconElement"></i>
+    </div>
+</div>
+<script src="{% static 'js/beauty.js'%}"></script>
+
+    

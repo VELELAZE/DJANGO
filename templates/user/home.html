@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    {%load static %}
+    <link rel="stylesheet" href="{% static 'css/user/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<style>
+   
+</style>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="{% static 'images/hacker.jpeg' %}" alt="logo">
+            <h2>Django Website</h2>
+        </div>
+        <ul>
+            <li><a href="{%url 'profile' %}">Home</a></li>
+           
+            <li><a href="{% url 'profile' %}">Profile</a></li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+        </ul>
+        <div class="fullscreen-icon" id="fullscreenIcon" onclick="toggleFullscreen()">
+            <i class="fas fa-expand" id="fullscreenIconElement"></i>
+        </div>
+    </div>
+    <!--Start Main-->
+    <div class="main-container">
+    <div class="header">
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+     {% endif %}
+    
+  
+    </div>
+    <div class="container">
+       <h2>Welcome to Django Web Development</h2>
+        {% if phone != '' %}
+      <ul>
+        <li><strong>First Name:</strong> {{first_name}}</li>
+        <li><strong>Email Address:</strong> {{email}}</li>
+        <li><strong>Phone no:</strong> {{phone}}</li>
+        <li><strong>Reg Date:</strong> {{date}}</li>
+      </ul>
+      {% endif %}
+
+        
+    </div>
+
+</div>
+<!--End Main-->
+
+<script src="{% static 'js/beauty.js'%}"></script>
+</body>
+</html>
