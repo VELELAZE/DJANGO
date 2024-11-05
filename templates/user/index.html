@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="{% static 'images/code-logo.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/user/dash.css' %}">
+    <title>VELELAZE SOFTWARES</title>
+</head>
+<body>
+    <div class="main-top">
+    <div class="navbar">
+        <div class="nav-items">
+            <div class="title">
+                <div class="logo">
+                    <img src="{% static 'images/code-logo.png' %}" alt="logo">
+                </div>
+                <h2>VELELAZE SOFTWARES</h2>
+            </div>
+            <div class="menu-icon">
+                <i class="fas fa-bars" id="menu"></i>
+            
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a class="a" href="{% url 'index' %}">Home</a></li>
+                    <li><a class="a" href="https://velelazesoftwares.kesug.com/pesaflux/user/" target="_blank">Get Started</a></li>
+                    <li><a class="a" href="#services">Our Services</a></li>
+                    <li><a class="a" href="#contact">Contact Us</a></li>
+                    <li><a class="a" href="https://velelazesoftwares.kesug.com/pesaflux/api/documentaion/" target="_blank">Developers</a></li>
+                    <li><a href="{% url 'login' %}" class="login">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="home" >
+      <div class="header">
+        <h2>Welcome to Velelaze Softwares</h2>
+        <p>We Provide Tech-Powered Daily Solutions</p>
+      </div>
+     <!--INFORMATION DIV BEGINS HERE-->
+      <div class="info">
+        <div class="left-card">
+                <p><strong>Velelaze Softwares </strong>is a leading provider of innovative software solutions, speacilizing in full-stack website development, cloud computing services, and seamless M-PESA integration.
+                Our dedicated team delivers cutting-edge technology tailored to meet the unique needs of businesses, driving efficiency and growth in today's digital landscape.
+                </p>
+                <div class="button">
+                    <a href="https://velelazesoftwares.kesug.com/pesaflux/user/" target="_blank">Get Started</a>
+                </div>
+        </div>
+        <div class="right-card">
+            
+                       <div class="images">
+                        <img src="{%static 'images/it-doc.jpeg' %}" alt="">
+                        <img src="{%static 'images/hello.jpeg' %}" alt="">
+                        <img id="right-image" src="{%static 'images/user.jpg' %}" alt="">
+                       </div>
+                        <div class="icons">
+                           <a href=""><i class="fas fa-phone"></i></a>
+                           <a href=""><i class="fab fa-telegram"></i></a> 
+                           <a href=""><i class="fab fa-whatsapp"></i></a>
+                           <a href=""><i class="fab fa-twitter"></i></a>
+                           <a href=""><i class="fab fa-linkedin"></i></a>
+                        </div>
+               
+            
+        </div>
+             
+      </div>
+      <!--END OF INFORMATION DIV-->
+    </div>
+
+    </div>
+    <!--END OF MAIN-Top-->
+<div class="about-container" id="about">
+    <div class="title">
+        <h2>About Us</h2>
+    </div>
+    <div class="about-us" >
+        <div class="information">
+            <p>
+                We provide full-stack development, cloud computing services, and seamless M-PESA integration, helping businesses stay competitive in today's fast-evolving digital landscape. Leveraging cloud-native and DevOps practices, the company delivers scalable, secure, and high-performance applications. Additionally, Velelaze is at the forefront of integrating artificial intelligence and machine learning, offering businesses AI-powered solutions that unlock the full potential of their data and drive innovation.
+            </p>
+            <p>
+                With a strong focus on fintech, We ensure secure and efficient M-PESA integration, enabling streamlined digital transactions. The company also prioritizes cybersecurity and data privacy, protecting businesses from emerging threats through robust encryption and advanced security measures. Embracing sustainability, Velelaze offers green tech solutions that help businesses achieve their environmental goals while maintaining operational efficiency.
+            </p>
+
+        </div>
+        <div class="profile-pic">
+            <img src="{% static 'images/company.avif' %}" alt="Company profile">
+            <p>Tech-Powered Daily Solutions</p>
+
+        </div>
+    </div>
+    </div>
+
+<!--OUR SERVICES-->
+<div class="services" id="services">
+    <div class="title">
+        <h2>Our Services</h2>
+    </div>
+    <div class="cards">
+        <div class="card">
+            <div class="icon">
+                <i class="fas fa-globe"></i>
+            </div>
+           <p>Web development</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">
+                <i class="fas fa-cloud"></i>
+            </div>
+           <p>Web Hosting</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">
+                <i class="fa-sharp-duotone fa-solid fa-mobile-button"></i>
+            </div>
+           <p>Mpesa Integration</p>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <i class="fas fa-code"></i>
+            </div>
+            
+           <p>PesaFlux Api</p>
+        </div>
+    </div>
+
+</div>
+<!--END OUR SERVICES-->
+
+<!--WHY US-->
+<div class="why-us-container">
+    <div class="title">
+        <h2>Why Choose Us</h2>
+    </div>
+    <div class="why-us">
+        <div class="logo">
+           <img src="{% static 'images/company.avif' %}" alt="">
+        </div>
+        <div class="why-info">
+           <h2>Why Choose us</h2>
+           <p>We know technology is essential for every business. Our company offers innovative software solutions that solve problems, streamline processes, and boost business performance. Here’s why you should choose us:</p>
+           <ul>
+            <li><strong>Tailored Solutions:</strong> We design custom software to meet your specific needs, ensuring it’s scalable, secure, and reliable.</li>
+            <li><strong>Cutting-Edge Technologies:</strong> We use the latest tools and technologies to deliver top-notch solutions.</li>
+            <li><strong>Quality Assurance:</strong> We ensure high-quality products through rigorous testing.</li>
+            <li><strong>Timely Delivery:</strong> We meet deadlines without compromising quality.</li>
+            <li><strong>Support and Maintenance:</strong> We offer ongoing support to keep your systems running smoothly.</li>
+           </ul>
+        </div>
+    </div>
+</div>
+<!--END WHY US-->
+<!--OUR CLIENTS-->
+<div class="customers" id="customers">
+    <div class="title">
+        <h2>Our Satisfied Customers</h2>
+    </div>
+    <div class="cards">
+        <div class="card">
+           
+           <p>RichMine Agencies</p>
+        </div>
+
+        <div class="card">
+           
+           <p>Preeminent Biotech</p>
+        </div>
+
+        <div class="card">
+        
+           <p>PesaHela App</p>
+        </div>
+        <div class="card">
+           
+           <p>Kasee Tech Motors</p>
+        </div>
+    </div>
+
+</div>
+<!--END OUR CLIENTS-->
+<!--CONTACT US-->
+<div class="contact-container" id="contact">
+    <div class="title">
+        <h2>Contact Us</h2>
+    </div>
+<div class="contact" >
+
+    <div class="info">
+     <h2>Get in Touch</h2>
+     <p>If you have any questions or need help ,please fill out the form below,We do our best to responce within one business day.
+     </p>
+     <ul>
+        <li><i class="fas fa-phone"></i> +254769290734</li>
+        <li><i class="fab fa-whatsapp fa-beat"></i><a href=""> WhatsApp use now</a></li>
+        <li><i class="fas fa-envelope"></i> info@velelazesoftwares.com</li>
+        <li><i class="fa-sharp fa-solid fa-location-dot"></i> Nairobi, Kenya</li>
+     </ul>
+    </div>
+    <div class="mail">
+      <form action="{% url 'sendmail'%}" method="POST">
+        {% csrf_token %}
+        {% if message %}
+        <p style="color: orangered;"> {{message}}</p>
+        {% endif %}
+        <h2>Message us</h2>
+        <div class="input-control">
+            <input type="text" name="name" placeholder="Full Name" minlength="6" required>
+            <input type="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="inputs">
+            <input type="text" name="subject" placeholder="Subject" required>
+            <textarea cols="56" name="body" rows="5" required placeholder="Type your message..."></textarea>
+        </div>
+        <div class="button">
+            <button type="submit">Send Message</button>
+        </div>
+        
+
+       </textarea>
+      </form>
+    </div>
+</div>
+
+</div>
+<!--END CONTACT US-->
+
+<div class="footer">
+      <div class="dev">
+        <p>&copy {{year}} All Rights reserved</p>
+        <p>Powered by Velelaze Softwares</p>
+      </div>
+</div>
+<!--POP UP FOR SIDEBAR-->
+<div class="sidebar" id="sidebar">
+    <i class="fas fa-close close"></i>
+    <div class="sidebar-menu">
+    <div class="links">
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="https://velelazesoftwares.kesug.com/pesaflux/user/" target="_blank">Get Started</a></li>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="https://velelazesoftwares.kesug.com/pesaflux/api/documentaion/" target="_blank">Developers</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                </ul>
+            </div>
+    </div>
+</div>
+<!--CLOSE POP UP-->
+
+<script>
+ document.getElementById('menu').addEventListener('click', function()
+ {
+   let sidebar = document.getElementById('sidebar');
+     if(sidebar.style.display == "none")
+     {
+        sidebar.style.display = "flex";
+     }
+     else{
+        sidebar.style.display = "none";
+     }
+
+ 
+
+ })
+
+</script>
+</body>
+</html>

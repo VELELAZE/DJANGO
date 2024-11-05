@@ -11,4 +11,5 @@ urlpatterns = [
     path('register',views.register,name='register'),
     path('logout',views.logout, name='logout'),
     path('data/',views.db_queries),
+    path('sendmail',views.send_html_email,name='sendmail')
 ]

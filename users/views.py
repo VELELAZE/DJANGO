@@ -7,16 +7,16 @@ from django.contrib.messages import get_messages
 import datetime
 from django.db import IntegrityError
 from django.http import HttpResponse
+from django.core.mail import send_mail
+from django.core.mail import EmailMultiAlternatives,EmailMessage
+from django.conf import settings
 
 # Create your views here.
-def home(request):
-    user_email = request.session.get('user_email')
+def index(request):
 
-    if user_email:
-        return render(request, 'user/home.html', {'email': user_email})
-    else:
-        messages.error(request, 'Authentication Failed! Login to proceed')
-        return redirect('login')
+    return render(request, 'user/index.html',{'year':datetime.datetime.now().year})
+def home(request):
+    return redirect('index')
 
 def login(request):
     storage = get_messages(request)
@@ -153,3 +153,36 @@ def db_queries(request):
     #performing operations in update , we use F  to modify a field based on its existing value
     client.objects.filter(Email = user_email).update(Balance = F('Balance') + 50)
     return HttpResponse(balance)
+
+
+
+
+from django.core.mail import EmailMessage
+
+def send_html_email(request):
+    if request.method == "POST":
+        client_name = request.POST.get('name')
+        client_email = request.POST.get('email')
+        client_subject = request.POST.get('subject')
+        client_issue = request.POST.get('body')
+
+
+        subject = client_subject
+        message = f"From, {client_name}\n A summary of the issue reported:\n{client_issue}\nWe’ll get back to you shortly with more information."
+        recipient_list = ['davidmuvai65@gmail.com']
+        sender_email = f'VELELAZE WEB<{settings.EMAIL_HOST_USER}>'
+        email = EmailMessage(subject, message, sender_email, recipient_list)
+        email.send()
+
+        if email.send():
+            subject = client_subject
+            message = f"Hello, {client_name} \n Thank you for reaching out to Velelaze Softwares. Here’s a summary of the issue you reported:\n {client_issue} \n We’ll get back to you shortly with more information."
+            
+            recipient_list = [client_email]
+            sender_email = f'VELELAZE SOFTWARES<{settings.EMAIL_HOST_USER}>'
+            email = EmailMessage(subject, message, sender_email, recipient_list)
+            email.send()
+
+            return render(request,'user/index.html',{'message':"Email sent successfully!"})
+    else:
+        return render(request,'user/index.html',{'message':"Invalid Request method"})
